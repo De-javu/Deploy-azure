@@ -40,7 +40,7 @@ jobs:
         with:
           Azure_static_web_apps_api_token: ${{ secrets.DEPLOYTOKEN }}
           apps_location: "public"
-          deployment_action: "src/upload"
+          deployment_action: "upload"
 
 
 

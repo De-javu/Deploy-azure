@@ -1,0 +1,50 @@
+# nombre del archivo: deploy.yml
+# Descripción: Workflow de GitHub Actions para pruebas y despliegue en GitHub Pages
+name: Deploy
+
+# Evento que activa el workflow al ahacer un push en la rama principal
+on:
+  push:
+
+# Se realiza la creación de jobs (tareas) al hacer push en la rama principal
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+
+# Definición de los pasos a seguir en el job
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v4
+
+     
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependencias
+        run: npm install
+        working-directory: .
+
+      - name: Run test
+        run: npm run test
+        working-directory: .
+
+      - name: build page
+        run: npm run build
+        working-directory: .
+
+      - name: Deploy to Azure
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          Azure_static_web_apps_api_token: ${{  }}
+          apps_location: "public"
+          deployment_action: "upload"
+
+
+
+          
+
+
+

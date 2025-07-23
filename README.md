@@ -32,3 +32,6 @@ Cada uno de estos momentos asegura que tu código pase por pruebas, construcció
 Inciamos colnando el proyecto y poniendolo en nuetsro repositoio para poder realizar la practica. es complicado mucho tiempo para hacer estaparcticvas
  # Integración con GitHub Packages
 proximo video 
+
+
+[![Deploy](https://github.com/De-javu/Deploy-azure/actions/workflows/deploy.yml/badge.svg?event=label)](https://github.com/De-javu/Deploy-azure/actions/workflows/deploy.yml)
